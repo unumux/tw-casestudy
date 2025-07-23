@@ -1,33 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  html {
+    font-size: 62.5%;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  a {
+    @apply underline font-bold;
+  }
+
+  ul {
+    @apply list-disc pl-12 mt-4 space-y-4;
+  }
+
+  li {
+    @apply text-theme;
+  }
+
+  h2 {
+    @apply unum:text-unum-heading-2 colonial:text-colonial-heading-2 font-bold;
+  }
+
+  p {
+    @apply mt-4;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.unum {
+  @apply bg-flat_white font-unum text-unum-body-copy;
+}
+
+.colonial {
+  @apply bg-colonial-warmneutral_1 font-colonial text-colonial-body-copy;
+}
+
+.button-primary,
+.button-secondary {
+  @apply px-6 py-4 rounded-md inline-block mt-2;
+}
+.unum .button-primary {
+  background-color: theme(colors.unum.kiwi_4);
+  color: theme(colors.flat_white);
+}
+
+.unum .button-secondary {
+  background-color: theme(colors.unum.pool_1);
+  color: theme(colors.flat_black);
+}
+
+.colonial .button-primary {
+  background-color: theme(colors.colonial.mint_4);
+  color: theme(colors.flat_white);
+}
+
+.colonial .button-secondary {
+  background-color: theme(colors.colonial.coral_1);
+  color: theme(colors.flat_black);
+}
+
+.unum [data-theme="theme-dark"] {
+  --theme-text-color: theme(colors.flat_white);
+}
+.unum [data-theme="theme-light"] {
+  --theme-text-color: theme(colors.flat_black);
+}
+
+.colonial [data-theme="theme-dark"] {
+  --theme-text-color: theme(colors.colonial.warmneutral_1);
+}
+.colonial [data-theme="theme-light"] {
+  --theme-text-color: theme(colors.colonial.warmneutral_5);
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .text-theme {
+    color: var(--theme-text-color);
   }
+}
+
+/* Override to make sure nested theme based components get the correct text color */
+.theme-dark\:text-flat_white,
+.theme-light\:text-flat_black {
+  color: var(--theme-text-color) !important;
 }

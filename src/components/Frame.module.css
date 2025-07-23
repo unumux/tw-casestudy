@@ -1,0 +1,4 @@
+.frame {
+  @apply border-2 border-unum-berryred border-dashed;
+  border-color: theme(colors.unum.gold);
+}
