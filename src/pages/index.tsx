@@ -393,16 +393,6 @@ export default function Home() {
               </Highlight>
             </Content>
           </Frame>
-          <Frame type="two-col">
-            <Content
-              heading="Tailwind CSS Benefits"
-              content="Tailwind CSS provides utility-first styling, which allows for rapid development and easy customization. It also promotes consistency across components."
-            ></Content>
-            <Content
-              heading="Tailwind CSS Features"
-              content="Tailwind CSS includes features like responsive design, hover states, and dark mode support, making it a versatile choice for modern web development."
-            ></Content>
-          </Frame>
         </section>
       </main>
     </>
