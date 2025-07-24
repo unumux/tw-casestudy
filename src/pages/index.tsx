@@ -346,7 +346,45 @@ export default function Home() {
                           </p>
                         </li>
                         <li>
-                          <p></p>
+                          <p className="font-bold">Project Dependency</p>
+                          <p>
+                            We do have to install Tailwind via NPM, creating a
+                            dependency that could cause issues down the road.
+                            This is a drawback. However, it is hard to envision
+                            a world where Tailwind changes so significantly that
+                            utility class names no longer work. Version 3 to
+                            version 4 did not change much. The biggest concern
+                            for me was the changes to PostCSS, as v4 no longer
+                            supported older versions. However, PostCSS and
+                            Tailwind are bundled, so if we upgrade Tailwind that
+                            should be an expectation of ours. It is overhead,
+                            but such is development.
+                          </p>
+                        </li>
+                        <li>
+                          <p className="font-bold">Learning Curve</p>
+                          <p>
+                            Tailwind is a new paradigm for many of us, and
+                            learning it will take time. This is a drawback, but
+                            I believe it&apos;s a small one. The utility-first
+                            approach is intuitive and easy to pick up, and the
+                            Tailwind documentation is well done. If we survived
+                            the mixins, giant selectors and heaps of SASS
+                            variables, Tailwind will be an easy transition.
+                          </p>
+                        </li>
+                        <li>
+                          <p className="font-bold">Verbose Class Names</p>
+                          <p>
+                            Tailwind&apos;s utility classes can be long and
+                            verbose, which can make the HTML markup harder to
+                            read. However, the combat to this is shown in this
+                            project where we are not solely relying on Tailwind
+                            for verbose styling. There should be a delinination
+                            between what is good Tailwind and when we move it to
+                            Module CSS or create new utility classes to
+                            encapsulate complex logic.
+                          </p>
                         </li>
                       </ul>
                     </Content>
