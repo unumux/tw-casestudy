@@ -131,7 +131,7 @@ export default function Home() {
                             variable name somewhere up the tree, or needing to
                             refer to some other class to replicate the styles in
                             a different component. Because Tailwind is utility
-                            first, we don't have to worry about any of the
+                            first, we don&apos;t have to worry about any of the
                             context switching issue nor scoping issues arising
                             due to incompatiable compositions, specificity
                             issues or devising a naming convention to tain order
@@ -144,7 +144,7 @@ export default function Home() {
                             to the element, not the cascade - this means you can
                             1:1 what is currently in production BY HAND almost
                             undoubtedly faster and more accurately than having
-                            copilot generate a module with it's assumptions
+                            copilot generate a module with it&apos;s assumptions
                             derived from mixin and SASS variable usage. This is
                             a critical point in the conversation! The need to
                             reverse-engineer and re-engineer styles for any
@@ -190,7 +190,7 @@ export default function Home() {
                           </span>
                           <p>
                             Do you hate making dropdowns? Tired of writing giant
-                            selectors? Don't want to apply margin-top to
+                            selectors? Don&apos;t want to apply margin-top to
                             everything under the sun?
                           </p>
                           <p>
@@ -210,11 +210,11 @@ export default function Home() {
                               </p>
                               <Code>group group:hover-underline</Code>
                               <p>
-                                Group allows you to flag an element to "group"
-                                it with another element to create interactions
-                                between the 2 elements, speficially in parent
-                                and child context. This is especially useful for
-                                creating drop down menus.
+                                Group allows you to flag an element to
+                                &quot;group&quot; it with another element to
+                                create interactions between the 2 elements,
+                                speficially in parent and child context. This is
+                                especially useful for creating drop down menus.
                               </p>
                             </li>
                             <li>
@@ -237,16 +237,16 @@ export default function Home() {
                                 this claim, here's the results:
                               </p>
                               <p className="font-bold">
-                                "Using Tailwinds utility classes like space-y-2,
-                                gap-x-2, and variants like first:mt-2 allows you
-                                to handle spacing and layout directly in your
-                                markup, eliminating the need for custom CSS
-                                selectors and repetitive margin/padding rules.
-                                In a large project, this can easily save
+                                &quot;Using Tailwinds utility classes like
+                                space-y-2, gap-x-2, and variants like first:mt-2
+                                allows you to handle spacing and layout directly
+                                in your markup, eliminating the need for custom
+                                CSS selectors and repetitive margin/padding
+                                rules. In a large project, this can easily save
                                 hundreds of lines of hand-written CSS, reduce
                                 maintenance overhead, and improve consistency.
                                 This is one of the main reasons teams adopt
-                                Tailwind CSS."
+                                Tailwind CSS.&quot;
                               </p>
                             </li>
                           </ul>
@@ -258,25 +258,25 @@ export default function Home() {
                             </a>
                           </p>
                           <p>
-                            Tailwind naturally comes with it's own set of
+                            Tailwind naturally comes with it&apos;s own set of
                             biases, however Tailwind should{" "}
                             <span className="font-bold">not be mistaken</span>{" "}
                             for something like Bootstrap. Tailwind is a CSS
                             framework, and is supringingly easy to customize and
                             integrate our own setup into. Not to mention, we can
-                            still define our own CSS and even use Tailwind's
-                            helper classes to define it's properties for common
-                            patterns.
+                            still define our own CSS and even use
+                            Tailwind&apos;s helper classes to define it&apos;s
+                            properties for common patterns.
                           </p>
                           <Code>{`.custom {\n  @apply unum:bg-unum-blue_2 colonial:bg-colonial_steelblue text-2xl font-bold text-center;\n}`}</Code>
                           <Code>{`.custom {\n  background-color: var(--brand-bg-color); //Resolves to theme(colors.brand.swatch) \n  font-size: theme('fontSize.2xl');\n  font-weight: theme('fontWeight.bold');\n  text-align: center;\n}`}</Code>
                           <p>
                             There are 2 methods of writing custom CSS that falls
                             outside of component scoped implementation and
-                            examples of those are above. Generally this won't
-                            always need to be the case, as the utility paradigm
-                            solves most cases, but if Tailwind cannot do it, we
-                            can. So what's the difference?{" "}
+                            examples of those are above. Generally this
+                            won&apos;t always need to be the case, as the
+                            utility paradigm solves most cases, but if Tailwind
+                            cannot do it, we can. So what&apos;s the difference?{" "}
                             <span className="font-bold">@apply</span> is limited
                             to existing Tailwind utility classes and their
                             variants, so it can’t be used for arbitrary values
@@ -286,8 +286,9 @@ export default function Home() {
                             your Tailwind config, giving you more flexibility
                             for advanced or custom CSS. Once the configuration
                             is created, no matter how you build your component
-                            classes, Tailwind's theming framework helps maintain
-                            concise styling and consistency across the project.
+                            classes, Tailwind&apos;s theming framework helps
+                            maintain concise styling and consistency across the
+                            project.
                           </p>
                         </li>
                         <li>
@@ -301,7 +302,7 @@ export default function Home() {
                             oppurtunity in this moment today that we very well
                             may not see again for several years - this
                             implementation is a chance to seize a codebase that
-                            works for all of us. That's not to imply that
+                            works for all of us. That&apos;s not to imply that
                             Tailwind has to work for you, but as developers and
                             as individuals, growing our skill set in industry
                             standard frontend frameworks not only make us more
@@ -323,7 +324,32 @@ export default function Home() {
                     <Content
                       heading="Drawbacks"
                       content="Tailwind CSS is a utility-first CSS framework that allows for rapid styling of components using predefined classes."
-                    />
+                    >
+                      <ul>
+                        <li>
+                          <p className="font-bold">
+                            &quot;Reworking&quot; Again
+                          </p>
+                          <p>
+                            We will have to spend some time updating the current
+                            code base to support Tailwind. This is definitley a
+                            drawback, but I do believe it&apos;s a lot softer
+                            than we may imagine. Because Tailwind is a CSS
+                            Framework, and not a full on style system like
+                            Bootstrap, Tailwind will not break any of the
+                            current CSS Modules. That said, there will need to
+                            be discussion around the best way to inetgrate
+                            Tailwind into our code and holding ourselves to
+                            well-thought best practices and to not allow
+                            ourselves to be over reliant on the utility first
+                            approach.
+                          </p>
+                        </li>
+                        <li>
+                          <p></p>
+                        </li>
+                      </ul>
+                    </Content>
                   </Highlight>
                 </Frame>
               </Highlight>
