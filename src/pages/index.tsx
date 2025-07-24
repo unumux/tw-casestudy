@@ -234,7 +234,7 @@ export default function Home() {
                                 This simple yet effective code reduction
                                 technique saves likely 100s of lines of CSS
                                 across the project. I asked CoPilot to verify
-                                this claim, here's the results:
+                                this claim, heres the results:
                               </p>
                               <p className="font-bold">
                                 &quot;Using Tailwinds utility classes like
