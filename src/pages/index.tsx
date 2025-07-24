@@ -102,7 +102,7 @@ export default function Home() {
                   >
                     <Content heading="Drawbacks Overview" content="" />
                     <ul>
-                      <li>\"Reworking\" Again</li>
+                      <li>&quot;Reworking&quot; Again</li>
                       <li>Project Dependency</li>
                       <li>Learning Curve</li>
                       <li>Verbose Class Names</li>
